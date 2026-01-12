@@ -21,7 +21,7 @@ export default function Admin() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const API_BASE = `${process.env.NEXT_PUBLIC_API_URL}/api`
+  const API_BASE = `${process.env.NEXT_PUBLIC_API_URL}`
 
   useEffect(() => {
     fetchProducts()
