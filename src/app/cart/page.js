@@ -35,7 +35,7 @@ export default function Cart() {
 
     setLoading(true)
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`, {
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/orders`, {
         items: cart.map(item => ({ product: item._id, quantity: 1 })),
         customerInfo
       })

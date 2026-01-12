@@ -20,7 +20,7 @@ export default function ProductDetail() {
 
   const fetchProduct = async () => {
     try {
-      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${params.id}`)
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products/${params.id}`)
       setProduct(data.data)
     } catch (error) {
       console.error(error)
@@ -31,7 +31,7 @@ export default function ProductDetail() {
 
   const fetchRelatedProducts = async () => {
     try {
-      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products?category=${params.category || 'Sensors'}&limit=4`)
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products?category=${params.category || 'Sensors'}&limit=4`)
       setRelatedProducts(data.data || [])
     } catch (error) {
       console.error(error)

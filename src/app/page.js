@@ -15,7 +15,7 @@ export default function Home() {
 
   const fetchProducts = async () => {
     try {
-      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/products`, {
+      const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
         params: search ? { search } : {}
       })
       setProducts(data.data || [])
